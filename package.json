@@ -1,0 +1,27 @@
+{
+  "name": "node-ajax-helper",
+  "version": "0.1.0",
+  "description": "use request like jquery ajax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cheeriojs/cheerio.git"
+  },
+  "keywords": [
+    "ajax",
+    "http"
+  ],
+  "author": {
+    "name": "lingxuan630",
+    "email": "lingxuan630@gmail.com"
+  },
+  "dependencies": {
+    "extend": "~3.0.0",
+    "q" : "^1.4.0",
+    "request": "^2.51.0"
+  },
+  "license": "MIT"
+}
