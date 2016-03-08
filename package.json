@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cheeriojs/cheerio.git"
+    "url": "git@github.com:lingxuan630/node-ajax-helper.git"
   },
   "keywords": [
     "ajax",
