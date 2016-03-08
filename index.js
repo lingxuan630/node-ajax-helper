@@ -14,9 +14,10 @@ var Ajax = function(options){
 		json: true,
 		headers : {
 			"Content-Type" : 'application/x-www-form-urlencoded'
-		}
+		},
+		data: {}
 	}
-	return this.request(options);
+	return this;
 }
 
 Ajax.prototype.setup = function(options){
@@ -100,8 +101,7 @@ Ajax.prototype.request = function(options){
 	var $this = this;
 
 	var reqOptions = extend($this.defaults, options);
-
-	if(options.data){
+	if((typeof options.data) != 'undefined'){
 		reqOptions.form = options.data;
 	}
 
