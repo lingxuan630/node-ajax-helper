@@ -24,14 +24,6 @@ Ajax.prototype.setup = function(options){
 	this.defaults = extend(this.defaults, options);
 }
 
-Ajax.prototype.buildRequestData = function(data){
-	if(!data){
-		return extend(this.formData, data);
-	}else{
-		return this.formData;
-	}
-}
-
 Ajax.prototype._bulidUrlParam = function(data){
 	var params = {};
 	var paramStr = null;
@@ -81,7 +73,7 @@ Ajax.prototype.put = function(url, data){
 	return this.request(options);
 }
 
-Ajax.prototype.del = function(url){
+Ajax.prototype.del = function(url, data){
 	var options = {
 		uri: url,
 		method: 'DELETE'
@@ -101,8 +93,8 @@ Ajax.prototype.request = function(options){
 	var $this = this;
 
 	var reqOptions = extend($this.defaults, options);
-	if((typeof options.data) != 'undefined'){
-		reqOptions.form = options.data;
+	if((typeof options.data) != 'undefined' && options.json === true){
+		reqOptions.body = options.data;
 	}
 
 	delete reqOptions.data;
