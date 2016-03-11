@@ -93,7 +93,7 @@ Ajax.prototype.request = function(options){
 	var $this = this;
 
 	var reqOptions = extend($this.defaults, options);
-	if((typeof options.data) != 'undefined' && options.json === true){
+	if((typeof options.data) != 'undefined' && reqOptions.json === true){
 		reqOptions.body = options.data;
 	}
 
