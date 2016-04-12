@@ -1,6 +1,6 @@
 {
   "name": "node-ajax-helper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "use request like jquery ajax",
   "main": "index.js",
   "scripts": {
